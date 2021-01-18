@@ -1,10 +1,6 @@
-import { AbsoluteSourceSpan } from '@angular/compiler';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AboutComponent } from './component/about/about.component';
-import { ContactsComponent } from './component/contacts/contacts.component';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
-import { MembersComponent } from './component/members/members.component';
 import { LayoutComponent } from './component/shared/layout/layout.component';
 
 const routes: Routes = [
@@ -14,26 +10,28 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        component: DashboardComponent,
+        loadChildren: () => import('./component/dashboard/dashboard.module').then((m) => m.DashboardModule),
       },
-      {
-        path: 'aboutus',
-        component: AboutComponent,
-      },
+
       {
         path: 'members',
-        component: MembersComponent,
+        loadChildren: () =>
+          import('./component/members/all-members/all-members.module').then((m) => m.AllMembersModule),
       },
       {
         path: 'contacts',
-        component: ContactsComponent,
+        loadChildren: () => import('./component/contacts/contacts.module').then((m) => m.ContactsModule),
+      },
+      {
+        path: 'aboutus',
+        loadChildren: () => import('./component/about/about.module').then((m) => m.AboutModule),
       },
     ],
   },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { useHash: true })],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

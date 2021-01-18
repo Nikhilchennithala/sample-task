@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav-list-item',
@@ -6,7 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nav-list-item.component.scss'],
 })
 export class NavListItemComponent implements OnInit {
-  constructor() {}
+  constructor(private readonly router: Router, private readonly activatedRoute: ActivatedRoute) {}
 
   ngOnInit(): void {}
+
+  public onLoginButtonClicked(): void {
+    this.router.navigate(['authentication/login']);
+  }
 }
