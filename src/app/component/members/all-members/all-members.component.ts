@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 @Component({
-  selector: 'app-all-members',
+  selector: 'app-all-user',
   templateUrl: './all-members.component.html',
   styleUrls: ['./all-members.component.scss'],
 })
