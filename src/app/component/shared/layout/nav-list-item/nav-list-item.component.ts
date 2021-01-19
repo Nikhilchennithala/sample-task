@@ -10,8 +10,4 @@ export class NavListItemComponent implements OnInit {
   constructor(private readonly router: Router, private readonly activatedRoute: ActivatedRoute) {}
 
   ngOnInit(): void {}
-
-  public onLoginButtonClicked(): void {
-    this.router.navigate(['authentication/login']);
-  }
 }

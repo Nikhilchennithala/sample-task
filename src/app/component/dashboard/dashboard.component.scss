@@ -1,0 +1,47 @@
+.login-container {
+  background-color: red;
+  position: fixed;
+  top: 100px;
+  right: 30px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+}
+
+.login-card {
+  width: 300px;
+  position: relative;
+  border-radius: 0 !important;
+}
+
+.forgot-password {
+  text-decoration: underline;
+  font-style: italic;
+  cursor: pointer;
+}
+.login-form {
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.login-form h5 {
+  font-weight: 500;
+  letter-spacing: 0.41px;
+  text-align: center;
+  font-size: 25px;
+  margin-top: 20px;
+}
+.forgot {
+  margin-right: -60px;
+}
+
+.btn {
+  background-color: #0c9e10;
+  border: none;
+  border-radius: 0 !important;
+  margin-top: 20px;
+  padding: 10px;
+  width: 180px;
+}
+.checkbox {
+  margin-top: 20px;
+  margin-left: -60px;
+}

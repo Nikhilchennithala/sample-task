@@ -1,1 +1,30 @@
-dashboard works
+<div class="row">
+  <div class="login-container">
+    <mat-card class="login-card">
+      <mat-card-content>
+        <div class="login-wrapper">
+          <div class="login-form">
+            <div class="form-field p-md-3">
+              <h5>LOGIN</h5>
+              <form [formGroup]="loginForm">
+                <mat-form-field class="w-100">
+                  <input type="text" formControlName="username" matInput placeholder="Email Address" required />
+                  <mat-error> Email is required </mat-error>
+                </mat-form-field>
+                <mat-form-field class="w-100">
+                  <input type="password" formControlName="password" matInput placeholder="Password" required />
+                  <mat-error> Password is required </mat-error>
+                </mat-form-field>
+                <div class="forgot">
+                  <span class="f-r forgot-password" [routerLink]="['/forgot-password']">Forgot Password?</span>
+                </div>
+                <div class="checkbox"><mat-checkbox color="primary"> Remember Me </mat-checkbox></div>
+                <button type="button" class="mt-5 btn btn-edit fs-12 shadow-none w-100" type="submit">Login</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
